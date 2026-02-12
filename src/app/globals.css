@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fffaf0; /* soft sunflower cream */
+  --foreground: #3b2608; /* warm deep brown */
+  --accent: #f6c453; /* sunflower gold */
+  --accent-soft: #fff1c7; /* pale sunflower */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+}
+
+.page-letter {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+.card-letter {
+  border-radius: 1.5rem;
+  box-shadow: 0 22px 60px rgba(118, 79, 15, 0.16);
+}
+
+.fade-in-soft {
+  animation: fade-in-soft 420ms ease-out both;
+}
+
+@keyframes fade-in-soft {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
